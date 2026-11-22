@@ -1,0 +1,240 @@
+{
+  "n": 3350,
+  "reproduced_mismatch_vs_shipped": 0,
+  "ba_base": 0.5017306359461492,
+  "ba_refined_all_rows": 0.4983612340852069,
+  "ba_shipped": 0.47834829133884493,
+  "ba_replay": 0.47834829133884493,
+  "ba_residual_masked_only": 0.4991094570556521,
+  "steps": [
+    {
+      "rule": "sibling_residual_masked_non_glm",
+      "changed": 53
+    },
+    {
+      "spaced_em_dash": 103,
+      "curly_apostrophe": 1,
+      "em_dash_gemini": 10
+    }
+  ],
+  "flips": {},
+  "flip_pairs": [
+    {
+      "pair": "gemini-3.6-flash -> gemini-3.7-flash",
+      "n": 3,
+      "net": 3
+    },
+    {
+      "pair": "gpt-5.6-terra -> gpt-5.6-sol",
+      "n": 2,
+      "net": 2
+    },
+    {
+      "pair": "claude-opus-4-8 -> claude-opus-4-6",
+      "n": 1,
+      "net": 1
+    },
+    {
+      "pair": "claude-opus-5 -> claude-opus-4-8",
+      "n": 1,
+      "net": 1
+    },
+    {
+      "pair": "gpt-5.5 -> gpt-5.6-sol",
+      "n": 1,
+      "net": 1
+    },
+    {
+      "pair": "claude-opus-4-6 -> kimi-k3",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gemini-3.8-flash -> gemini-3.1-pro-preview",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "claude-sonnet-5 -> gemini-3.1-pro-preview",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "claude-opus-5 -> glm-5.3",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gemini-3.8-flash -> gemini-3.6-flash",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "claude-fable-5 -> glm-5.3",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "kimi-k3 -> glm-5.3-flash",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gpt-6-astra -> claude-opus-4-6",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gpt-6-astra -> claude-opus-5",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gpt-6-astra -> gpt-5.6-luna",
+      "n": 2,
+      "net": 0
+    },
+    {
+      "pair": "gpt-5.6-luna -> claude-opus-4-6",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "kimi-k3 -> claude-opus-4-6",
+      "n": 2,
+      "net": 0
+    },
+    {
+      "pair": "claude-sonnet-5 -> glm-5.3-flash",
+      "n": 4,
+      "net": 0
+    },
+    {
+      "pair": "gemini-3.7-flash -> claude-opus-4-6",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gemini-3.8-flash -> claude-opus-4-6",
+      "n": 1,
+      "net": 0
+    },
+    {
+      "pair": "gpt-5.6-luna -> glm-5.3-flash",
+      "n": 1,
+      "net": -1
+    },
+    {
+      "pair": "gpt-5.5 -> glm-5.3",
+      "n": 1,
+      "net": -1
+    },
+    {
+      "pair": "gpt-5.6-terra -> claude-opus-4-6",
+      "n": 3,
+      "net": -1
+    },
+    {
+      "pair": "gemini-3.1-pro-preview -> gemini-3.6-flash",
+      "n": 2,
+      "net": -1
+    },
+    {
+      "pair": "claude-opus-4-8 -> glm-5.3-flash",
+      "n": 2,
+      "net": -1
+    },
+    {
+      "pair": "qwen3.8-max -> claude-opus-4-6",
+      "n": 1,
+      "net": -1
+    },
+    {
+      "pair": "gemini-3.1-pro-preview -> claude-opus-4-8",
+      "n": 1,
+      "net": -1
+    },
+    {
+      "pair": "gemini-3.7-flash -> gemini-3.1-pro-preview",
+      "n": 1,
+      "net": -1
+    },
+    {
+      "pair": "gemini-3.1-pro-preview -> gemini-3.7-flash",
+      "n": 1,
+      "net": -1
+    },
+    {
+      "pair": "gpt-5.5 -> glm-5.3-flash",
+      "n": 2,
+      "net": -2
+    },
+    {
+      "pair": "gemini-3.7-flash -> gemini-3.8-flash",
+      "n": 2,
+      "net": -2
+    },
+    {
+      "pair": "claude-opus-4-8 -> claude-sonnet-5",
+      "n": 2,
+      "net": -2
+    },
+    {
+      "pair": "gpt-5.5 -> gpt-5.6-luna",
+      "n": 2,
+      "net": -2
+    },
+    {
+      "pair": "gpt-5.6-terra -> gpt-5.6-luna",
+      "n": 17,
+      "net": -2
+    },
+    {
+      "pair": "claude-opus-4-8 -> glm-5.3",
+      "n": 3,
+      "net": -3
+    },
+    {
+      "pair": "claude-opus-4-8 -> claude-opus-5",
+      "n": 3,
+      "net": -3
+    },
+    {
+      "pair": "claude-sonnet-5 -> glm-5.3",
+      "n": 21,
+      "net": -4
+    },
+    {
+      "pair": "gpt-5.6-sol -> gpt-5.6-luna",
+      "n": 6,
+      "net": -6
+    },
+    {
+      "pair": "claude-sonnet-5 -> claude-opus-5",
+      "n": 7,
+      "net": -7
+    },
+    {
+      "pair": "gemini-3.1-pro-preview -> claude-opus-4-6",
+      "n": 8,
+      "net": -7
+    },
+    {
+      "pair": "gpt-5.5 -> claude-opus-5",
+      "n": 12,
+      "net": -12
+    },
+    {
+      "pair": "claude-sonnet-5 -> claude-opus-4-6",
+      "n": 24,
+      "net": -14
+    },
+    {
+      "pair": "gpt-5.5 -> claude-opus-4-6",
+      "n": 16,
+      "net": -14
+    }
+  ],
+  "flips_total": 166,
+  "flips_net": -81
+}
