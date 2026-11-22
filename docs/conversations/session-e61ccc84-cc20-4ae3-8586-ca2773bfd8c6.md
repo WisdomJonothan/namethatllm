@@ -6738,3 +6738,33 @@ background job bash-2587 (bash: 导出本项目相关会话为 Markdown) finishe
   - ↳ + f8255124-43a4-43b4-a51b-3361205ba1d3 29 KB + session-45243268-825b-4210-973b-3e75dcbaac6c 16 KB + session-4581788c-1363-413a-8f92-25db11c2737a 433 KB + sessio …
 
 - ⚙ `ops_bash` command=cd /d/namethatllm-repo && python - <<'PY' import pathlib p=p …, description=收紧筛选条件后重新导出
+  - ↳ patched filter + 9a702650-4092-4046-9da2-f9e8b1e47251 21 KB + 9ba0bba8-4ea4-4503-ab6d-38fa20f853a4 29 KB + abc6b56e-b1b5-4671-9ad8-c501e443ae8f 29 KB + b57d08f8 …
+
+- ⚙ `ops_bash` command=cd /d/namethatllm-repo && cat docs/conversations/index.md, description=查看对话导出索引
+  - ↳ # 对话记录索引 共 25 个会话（按会话 id 排序）。 | # | 会话 | 大小 | |---|---|---| | 1 | [01db721c-9e43-4a1b-a8ab-3505619a4eb2](01db721c-9e43-4a1b-a8ab-3505619a4eb2.md) | 17 KB | | 2  …
+
+- ⚙ `write` content=# 实验结论汇总 按"假设 → 做法 → 结果 → 结论"记录，避免重复踩坑。所有数字都可追溯：脚本在 `scripts …, file_path=D:\namethatllm-repo\docs\EXPERIMENTS.md
+  - ↳ <path>D:\namethatllm-repo\docs\EXPERIMENTS.md</path> <type>file</type> <content> Created file </content>
+
+- ⚙ `write` content=# 时间线 所有时间为本地时区（UTC+8）。分数均来自 Kaggle 官方页面。 ## 2026-11-21 | 时间 …, file_path=D:\namethatllm-repo\docs\TIMELINE.md
+  - ↳ <path>D:\namethatllm-repo\docs\TIMELINE.md</path> <type>file</type> <content> Created file </content>
+
+- ⚙ `ops_bash` command=cd /d/namethatllm-repo && cat > kaggle/submissions.md <<'EOF …, description=写入提交记录、数据集清单、数据说明与许可
+  - ↳ data: README.md eval_v2.csv folds.csv sample_submission.parquet test.csv train.csv kaggle: datasets.md kernel_files submissions.md --- 17M /d/namethatllm-repo [ …
+
+- ⚙ `ops_bash` command=cd /d/namethatllm-repo/kaggle/kernel_files && rm -f diag_lp. …, description=清理重复文件并初始化 git 提交
+  - ↳ 15 7143fc3 Name That LLM: 复现 0.716、独立验证集诊断与证伪实验 size-pack: 0 bytes [stderr] warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next t …
+
+- ⚙ `ops_bash` command=cd /d/namethatllm-repo && git branch -M main && (git -c http …, description=通过本地代理推送到 GitHub
+  - ↳ fatal: 'origin' does not appear to be a git repository fatal: Could not read from remote repository. Please make sure you have the correct access rights and the …
+
+- ⚙ `ops_bash` command=cd /d/namethatllm-repo && git remote add origin https://gith …, description=添加远端并推送
+  - ↳ To https://github.com/WisdomJonothan/namethatllm.git * [new branch] main -> main branch 'main' set up to track 'origin/main'. [exit code: 0]
+
+- ⚙ `ops_bash` command=cd /d/NameThatLLM && python - <<'PY' 2>&1 | tail -12 import  …, description=列出已提交内核版本的输出文件
+  - ↳ n: 18 ['adapter.py', 'atlas_infer.py', 'comp_stack.py', 'delta_turing.py', 'gauss.py', 'gsq_infer.py', 'gsq_infer_layers.py', 'gsq_infer_model.py', 'gsq_stage.p …
+
+- ⚙ `ops_bash` command=mkdir -p /d/namethatllm-repo/kaggle/submitted_v3 && cd /d/Na …, description=下载被评分的 submission.parquet 作为实物留档
+  - ↳ ok submission.parquet 1682 ok v1_smoke.log 193510 total 200 drwxr-xr-x 1 Lenovo 197121 0 Nov 23 00:19 . drwxr-xr-x 1 Lenovo 197121 0 Nov 23 00:19 .. -rw-r--r--  …
+
+- ⚙ `ops_bash` command=cd /d/namethatllm-repo && cat > kaggle/submitted_v3/README.m …, description=补充产物说明并再次推送
