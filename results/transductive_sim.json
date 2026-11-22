@@ -1,0 +1,60 @@
+{
+  "naive": 0.3015,
+  "clustered_greedy": {
+    "ba": 0.3241,
+    "delta": 0.0226,
+    "changed_rows": 1592
+  },
+  "clustered_hungarian": {
+    "ba": 0.3875,
+    "delta": 0.086,
+    "changed_rows": 1509
+  },
+  "oracle_greedy": {
+    "ba": 0.333,
+    "delta": 0.0315,
+    "changed_rows": 1649
+  },
+  "oracle_hungarian": {
+    "ba": 0.4038,
+    "delta": 0.1023,
+    "changed_rows": 1537
+  },
+  "rescued_classes": [
+    {
+      "class": "claude-opus-4-8",
+      "recall_naive": 0.213,
+      "recall_dedup": 0.407
+    },
+    {
+      "class": "gemini-3.8-flash",
+      "recall_naive": 0.267,
+      "recall_dedup": 0.427
+    },
+    {
+      "class": "qwen3.8-max",
+      "recall_naive": 0.28,
+      "recall_dedup": 0.407
+    },
+    {
+      "class": "gemini-3.1-pro-preview",
+      "recall_naive": 0.667,
+      "recall_dedup": 0.793
+    },
+    {
+      "class": "gpt-6-astra",
+      "recall_naive": 0.407,
+      "recall_dedup": 0.527
+    },
+    {
+      "class": "claude-fable-5",
+      "recall_naive": 0.107,
+      "recall_dedup": 0.221
+    }
+  ],
+  "cluster_sizes": {
+    "min": 3,
+    "median": 18,
+    "max": 36
+  }
+}

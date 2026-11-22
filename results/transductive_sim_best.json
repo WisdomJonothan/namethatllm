@@ -1,0 +1,60 @@
+{
+  "naive": 0.3478,
+  "clustered_greedy": {
+    "ba": 0.3641,
+    "delta": 0.0163,
+    "changed_rows": 1454
+  },
+  "clustered_hungarian": {
+    "ba": 0.4316,
+    "delta": 0.0838,
+    "changed_rows": 1377
+  },
+  "oracle_greedy": {
+    "ba": 0.3638,
+    "delta": 0.016,
+    "changed_rows": 1529
+  },
+  "oracle_hungarian": {
+    "ba": 0.4486,
+    "delta": 0.1008,
+    "changed_rows": 1423
+  },
+  "rescued_classes": [
+    {
+      "class": "gemini-3.8-flash",
+      "recall_naive": 0.253,
+      "recall_dedup": 0.48
+    },
+    {
+      "class": "claude-fable-5",
+      "recall_naive": 0.114,
+      "recall_dedup": 0.295
+    },
+    {
+      "class": "gpt-5.6-luna",
+      "recall_naive": 0.253,
+      "recall_dedup": 0.42
+    },
+    {
+      "class": "claude-opus-4-8",
+      "recall_naive": 0.22,
+      "recall_dedup": 0.367
+    },
+    {
+      "class": "gpt-5.6-terra",
+      "recall_naive": 0.173,
+      "recall_dedup": 0.313
+    },
+    {
+      "class": "gemini-3.6-flash",
+      "recall_naive": 0.38,
+      "recall_dedup": 0.5
+    }
+  ],
+  "cluster_sizes": {
+    "min": 3,
+    "median": 18,
+    "max": 36
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "oof_balanced_accuracy": 0.3015,
+  "per_fold": [
+    0.3019,
+    0.302,
+    0.2963,
+    0.3037,
+    0.3037
+  ],
+  "fold_mean": 0.3015,
+  "fold_sd": 0.0027,
+  "per_class_recall": {
+    "claude-fable-5": 0.1074,
+    "claude-opus-4-6": 0.36,
+    "claude-opus-4-8": 0.2133,
+    "claude-opus-5": 0.5867,
+    "claude-sonnet-5": 0.2667,
+    "gemini-3.1-pro-preview": 0.6667,
+    "gemini-3.6-flash": 0.4667,
+    "gemini-3.7-flash": 0.38,
+    "gemini-3.8-flash": 0.2667,
+    "glm-5.3": 0.2,
+    "glm-5.3-flash": 0.1067,
+    "gpt-5.5": 0.2,
+    "gpt-5.6-luna": 0.2667,
+    "gpt-5.6-sol": 0.1733,
+    "gpt-5.6-terra": 0.22,
+    "gpt-6-astra": 0.4067,
+    "kimi-k3": 0.26,
+    "qwen3.8-max": 0.28
+  },
+  "top_confusions": [
+    [
+      "gemini-3.8-flash",
+      "gemini-3.7-flash",
+      50
+    ],
+    [
+      "gemini-3.7-flash",
+      "gemini-3.8-flash",
+      43
+    ],
+    [
+      "glm-5.3",
+      "claude-opus-5",
+      37
+    ],
+    [
+      "gpt-5.6-sol",
+      "gpt-5.6-luna",
+      35
+    ],
+    [
+      "gpt-5.5",
+      "kimi-k3",
+      31
+    ],
+    [
+      "claude-fable-5",
+      "claude-opus-5",
+      30
+    ],
+    [
+      "gemini-3.7-flash",
+      "gemini-3.6-flash",
+      29
+    ],
+    [
+      "gemini-3.6-flash",
+      "gemini-3.7-flash",
+      29
+    ],
+    [
+      "glm-5.3-flash",
+      "glm-5.3",
+      28
+    ],
+    [
+      "gpt-5.6-terra",
+      "gpt-5.6-luna",
+      27
+    ]
+  ],
+  "n_features_last_fold": 97730,
+  "seconds": 78.9
+}

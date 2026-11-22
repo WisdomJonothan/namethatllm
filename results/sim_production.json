@@ -1,0 +1,58 @@
+{
+  "probs": "results/oof_style_fine.npz",
+  "n": 2699,
+  "groups": 150,
+  "group_size_mean": 17.99,
+  "naive": 0.3478,
+  "production": {
+    "ba": 0.4434,
+    "delta": 0.0956,
+    "changed": 1218
+  },
+  "oracle_groups": {
+    "ba": 0.446,
+    "delta": 0.0982
+  },
+  "rescued": [
+    {
+      "class": "gemini-3.6-flash",
+      "naive": 0.38,
+      "prod": 0.533
+    },
+    {
+      "class": "gemini-3.8-flash",
+      "naive": 0.253,
+      "prod": 0.4
+    },
+    {
+      "class": "claude-opus-4-6",
+      "naive": 0.533,
+      "prod": 0.673
+    },
+    {
+      "class": "gemini-3.1-pro-preview",
+      "naive": 0.713,
+      "prod": 0.847
+    },
+    {
+      "class": "gpt-6-astra",
+      "naive": 0.513,
+      "prod": 0.647
+    },
+    {
+      "class": "qwen3.8-max",
+      "naive": 0.467,
+      "prod": 0.6
+    },
+    {
+      "class": "claude-opus-4-8",
+      "naive": 0.22,
+      "prod": 0.347
+    },
+    {
+      "class": "gpt-5.6-luna",
+      "naive": 0.253,
+      "prod": 0.373
+    }
+  ]
+}

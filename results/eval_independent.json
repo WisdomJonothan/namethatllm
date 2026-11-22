@@ -1,0 +1,46 @@
+{
+  "pool_rows": 231036,
+  "after_label_filter": 231036,
+  "after_words_filter": 227086,
+  "dropped_high_sim": 0,
+  "dropped_no_route": 152378,
+  "selected_rows": 5400,
+  "selected_prompts": 2973,
+  "per_class": {
+    "gpt-5.5": 300,
+    "gpt-5.6-luna": 300,
+    "gpt-5.6-sol": 300,
+    "gpt-5.6-terra": 300,
+    "gpt-6-astra": 300,
+    "gemini-3.1-pro-preview": 300,
+    "gemini-3.6-flash": 300,
+    "gemini-3.7-flash": 300,
+    "gemini-3.8-flash": 300,
+    "claude-fable-5": 300,
+    "claude-opus-4-6": 300,
+    "claude-opus-4-8": 300,
+    "claude-opus-5": 300,
+    "claude-sonnet-5": 300,
+    "qwen3.8-max": 300,
+    "glm-5.3": 300,
+    "glm-5.3-flash": 300,
+    "kimi-k3": 300
+  },
+  "sim_quantiles": {
+    "0.5": 0.083,
+    "0.9": 0.143,
+    "0.99": 0.279
+  },
+  "routes": {
+    "dify": 840,
+    "anthropic": 795,
+    "OpenAI": 347,
+    "vertex": 325,
+    "openrouter": 319,
+    "vertex_claude": 314,
+    "openrouter_paid": 277,
+    "kaggle_proxy": 276,
+    "openai/flex": 206,
+    "vertex_gemini": 192
+  }
+}

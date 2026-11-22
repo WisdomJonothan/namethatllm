@@ -1,0 +1,9 @@
+{
+  "n_train": 2699,
+  "n_eval": 3350,
+  "n_models": 18,
+  "n_candidate_rules": 0,
+  "n_precision_ge_0.5": 0,
+  "n_precision_ge_0.8_fires_ge_30": 0,
+  "rules": []
+}

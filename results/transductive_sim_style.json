@@ -1,0 +1,60 @@
+{
+  "naive": 0.3367,
+  "clustered_greedy": {
+    "ba": 0.3467,
+    "delta": 0.01,
+    "changed_rows": 1464
+  },
+  "clustered_hungarian": {
+    "ba": 0.4153,
+    "delta": 0.0786,
+    "changed_rows": 1380
+  },
+  "oracle_greedy": {
+    "ba": 0.3464,
+    "delta": 0.0097,
+    "changed_rows": 1541
+  },
+  "oracle_hungarian": {
+    "ba": 0.4338,
+    "delta": 0.0971,
+    "changed_rows": 1426
+  },
+  "rescued_classes": [
+    {
+      "class": "gemini-3.8-flash",
+      "recall_naive": 0.233,
+      "recall_dedup": 0.453
+    },
+    {
+      "class": "claude-fable-5",
+      "recall_naive": 0.074,
+      "recall_dedup": 0.268
+    },
+    {
+      "class": "claude-opus-4-8",
+      "recall_naive": 0.18,
+      "recall_dedup": 0.347
+    },
+    {
+      "class": "gpt-5.6-luna",
+      "recall_naive": 0.213,
+      "recall_dedup": 0.373
+    },
+    {
+      "class": "gemini-3.6-flash",
+      "recall_naive": 0.4,
+      "recall_dedup": 0.513
+    },
+    {
+      "class": "gpt-5.6-terra",
+      "recall_naive": 0.18,
+      "recall_dedup": 0.293
+    }
+  ],
+  "cluster_sizes": {
+    "min": 3,
+    "median": 18,
+    "max": 36
+  }
+}

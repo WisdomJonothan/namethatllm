@@ -1,0 +1,42 @@
+{
+ "alpha": 0.5,
+ "drop_rate": 0.0,
+ "seeds": [
+  {
+   "naive": 0.3523,
+   "sinkhorn_uniform": 0.3464,
+   "sinkhorn_prior": 0.3737,
+   "hungarian": 0.2163,
+   "seed": 0,
+   "mean_group_size": 17.99
+  },
+  {
+   "naive": 0.3471,
+   "sinkhorn_uniform": 0.3533,
+   "sinkhorn_prior": 0.3687,
+   "hungarian": 0.2046,
+   "seed": 1,
+   "mean_group_size": 17.99
+  },
+  {
+   "naive": 0.3258,
+   "sinkhorn_uniform": 0.3221,
+   "sinkhorn_prior": 0.3433,
+   "hungarian": 0.2214,
+   "seed": 2,
+   "mean_group_size": 17.99
+  }
+ ],
+ "mean": {
+  "naive": 0.3417,
+  "sinkhorn_uniform": 0.3406,
+  "sinkhorn_prior": 0.3619,
+  "hungarian": 0.2141
+ },
+ "std": {
+  "naive": 0.0115,
+  "sinkhorn_uniform": 0.0134,
+  "sinkhorn_prior": 0.0133,
+  "hungarian": 0.007
+ }
+}
