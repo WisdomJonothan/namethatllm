@@ -219,3 +219,25 @@ stage3 内核（`repro/diag_v3.ipynb`）在 eval_v2 上跑完整个 v3 流水线
 补充一条同批数据的旁证（`scripts/glm_family_probe.py`、`results/glm_family_probe.json`）：在入选的 553 篇里，真 GLM 258 篇、非 GLM 295 篇，底座 GLM 质量在中位数以上的困难负例 135 篇。两款 GLM 的较优自似然对"是不是 GLM"的全样本 AUC 只有 0.512、按底座质量分 5 层后的层内 AUC 0.511；token 熵、surprise、fdg 都在 0.48–0.51。自似然只区分得了两款 GLM 属于哪一版（258 篇真 GLM 上 AUC 0.99），不能充当家族证据。该探针最初报的 `reader_min` 层内 AUC 0.637 已证伪：`diag_lp_members.npz` 存的是乘过成员权重的 log 贡献，`exp(3·log p)=p³`，取最小值实际在比输出尺度；逐成员 softmax 后降到 0.576、按主权重还原后 0.500，且 533/553 篇的最小值来自 DeBERTa 或 `n14b_clean`。
 
 复现：`python scripts/glm_flip_veto.py` 打印 104 行分歧与 32/12/60 的分解，`python scripts/glm_flip_veto_stability.py` 做 40 次折重排；逐行分数在 `results/glm_flip_rows.npz`。
+
+
+## E13 — 质量保持 GLM 融合上了公榜：没有兑现（2026-11-23）
+
+**改法**：v1 阶段的 GLM 融合从「加性 `z2[sel] += w·ll`」改成「先保留两款 GLM 的总质量 m，再在两版之间用自似然 softmax 重分」，并加守卫 `changed_mass <= max_changed(0.25)`，超限回退加性。载荷 sha `7820541658971df890fdeb05451bfd0458daf81628e1893c916781222d1056c0`，notebook `repro/prod_mass.ipynb`，内核 `ntl-v5-mass-preserving-glm-blend`。
+
+**本地（eval_v2，3,350 行）**：出厂 0.52065 → 0.49941；质量保持 0.52923 → 0.50611，净 **+0.00670**；prompt 成组 bootstrap 400 次 95% 区间 [+0.00245, +0.01159]，全为正。
+
+**公榜**：
+
+| 提交 | 内容 | public |
+|---|---|---:|
+| ref `58689652`（v3） | 出厂加性融合 | **0.716** |
+| ref `58763287`（v5） | 质量保持融合 | 0.705 |
+
+**读法**：−0.011 与同码重跑噪声（±0.01）同量级，不能据此判定"质量保持有害"；但**方向与本地 +0.0067 相反**，唯一能确定的结论是：eval_v2 上量到的这点增量不能迁移到隐藏集。
+
+**为什么没做成的可能原因**（未验证）：本地增益的主要机制是「GLM 总概率按版本比例重分后反超非 GLM 赢家」——eval_v2 里 98 行跨族进入 GLM（真 GLM 41 行），而隐藏集的 GLM 占比与文体都和外部语料不同；一旦"底座对 GLM 总概率的判断"在竞赛域上更保守，跨族重分就更可能伤而不是救。
+
+**决定**：不部署 v5，final 保留 v3 的 0.716。以后所有后处理改动必须在公榜上做单变量对照，不能只凭 eval_v2；一次公榜对照的成本是一次提交额度和约 8 小时排队。
+
+**未取到的证据**：隐藏集重跑的 `v1/report.json`（含 `blend`/`changed_mass`/`n_selected`）不在内核 Output 里（那里只有 FAST_COMMIT 的交互产物），提交记录也不暴露重跑日志。因此"守卫是否回退到加性"只能由 `changed_mass≈3%` 远低于 0.25 推断，未经实测确认。
