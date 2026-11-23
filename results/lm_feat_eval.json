@@ -1,0 +1,11 @@
+{
+ "lm_only": 0.1263,
+ "stack2": 0.3719,
+ "stack3": 0.363,
+ "delta": -0.0089,
+ "cheap_n_tok": 0.3612,
+ "alpha_best": 0.3,
+ "alpha_best_ba": 0.3838,
+ "base_ba": 0.3819,
+ "n_feats": 34
+}
