@@ -94,3 +94,6 @@ python scripts/kaggle_push_diag.py
 - 代码：MIT
 - 竞赛数据：CC BY-SA 4.0（Kaggle / Google LLC 提供）
 - `data/eval_v2.csv` 由公开数据集派生，遵守其上游许可，见 `data/README.md`
+
+### 2026-11-24
+- E15：两条候选路线——编码器融合本地 +0.034（弱单模强互补，未上流水线）、成对比较器三次换底座全败、同题硬负例三元组有害。
