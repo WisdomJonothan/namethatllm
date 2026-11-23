@@ -1,0 +1,45 @@
+{
+  "pool_val_acc": 0.5494,
+  "base_ba_eval_v2": 0.4783,
+  "pairs": {
+    "gpt-5.6-luna|gpt-5.6-terra": {
+      "rows": 244,
+      "ideal_ceiling": 0.0209,
+      "specialist_gain": -0.0021,
+      "realised_fraction": -0.1,
+      "per_class": {
+        "gpt-5.6-luna": {
+          "n": 188,
+          "acc_before": 0.7979,
+          "acc_after": 0.633
+        },
+        "gpt-5.6-terra": {
+          "n": 212,
+          "acc_before": 0.3255,
+          "acc_after": 0.4528
+        }
+      }
+    },
+    "gpt-5.6-luna|gpt-5.6-sol": {
+      "rows": 165,
+      "ideal_ceiling": 0.0172,
+      "specialist_gain": 0.0011,
+      "realised_fraction": 0.066,
+      "per_class": {
+        "gpt-5.6-luna": {
+          "n": 188,
+          "acc_before": 0.7979,
+          "acc_after": 0.7021
+        },
+        "gpt-5.6-sol": {
+          "n": 232,
+          "acc_before": 0.2543,
+          "acc_after": 0.3707
+        }
+      }
+    }
+  },
+  "n_rows_in_pairs": 459,
+  "combined_specialist_gain": -0.001,
+  "combined_ceiling": 0.0381
+}

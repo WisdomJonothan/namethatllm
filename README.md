@@ -29,6 +29,8 @@ Kaggle 竞赛 [Name That LLM](https://www.kaggle.com/competitions/name-that-llm)
 | 独立验证集 | 外部语料去重后重建 3,350 行 / 550 prompt / 18 类 | `data/eval_v2.csv`，内部 prompting CV 0.663 |
 | 诊断跑批 | 把测试集换成 eval_v2，跑完整六读者 + GSQ + native | 4h25m 完成，集成 BA **0.4783** |
 | 证伪实验 | A1 prompt 固定效应、A3 零方差伪影、A4 BA 最优决策层 | 前两个负结果，A4 小正信号 +0.0056（弱模型） |
+| GPT 三兄弟实验 | 同题配对专家与等预算对照 | 专家 +0.0056 被简单分差对照 +0.0202 追平，方向关闭 |
+| stage3 诊断跑批 | 打开 GLM 似然阶段，落盘成员 LP 与逐 token 证据 | 6.6h 完成；成员对账 3.4e-6；**定位到 GLM 融合算法缺陷** |
 
 ## 3. 关键结论
 
@@ -42,10 +44,13 @@ Kaggle 竞赛 [Name That LLM](https://www.kaggle.com/competitions/name-that-llm)
 
 **3.5 最后一层后处理对域外是负贡献。** 最终 `final-logits.npz` 的 argmax 在 eval_v2 上 0.5017，写进 parquet 的预测 0.4783 —— 差 0.023、约 5% 的行被改掉。说明这套后处理是对竞赛分布过拟合的。
 
+**3.6 GLM 似然阶段的分数没被兑现，问题在融合算法。** 出厂版 `argmax(zl + w·ll)` 把 GLM 的 18 类意见直接加进全部 logits、与其余 16 类竞争，判错时会抢走别的类的质量；在同一读者底座（BA 0.48515）上它只带来 −0.0005。改成"保留该对总概率、只在两版之间重分"后，同一底座上是 **+0.0240**（理想判别上限 +0.0398），真 GLM 行的判定准确率从 0.311 升到 0.503。自似然本身能分这两版（AUC 0.99、准确率 91%），所以缺的不是评分器而是融合算术。详见 `docs/EXPERIMENTS.md` E12。
+
 ## 4. 已知缺陷
 
 - **comp 通道整段丢失**：`comp_stack.py` 的 `find_checkpoint()` 按 `config.json` 的 `model_type`+`hidden_size` 选基座，**不校验权重文件**；挂载顺序变化后命中只有 config 的空壳目录 → `OSError: no file named model.safetensors`。兜底逻辑 `COMP SKIPPED` 让流程继续，但 `comp_w` 无从验证。
-- **中间态未落盘**：`infer.py` 只在特定 `write()` 调用时覆盖 `final-logits.npz`，各阶段概率矩阵 P 不保存，导致 comp_w / sinkhorn / ρ 无法离线精确重放。
+- **中间态未落盘**：`infer.py` 只在特定 `write()` 调用时覆盖 `final-logits.npz`，各阶段概率矩阵 P 不保存，导致 comp_w / sinkhorn / ρ 无法离线精确重放。stage3 补上了成员分项 LP 与 Apex 前预测，但 GSQ / native 两段的 P 仍未保存。
+- **GLM 阶段的融合算术有缺陷**：见 3.6，出厂版把意见当加性 logit，未做质量保持。
 
 ## 5. 目录
 
@@ -57,6 +62,7 @@ kaggle/          Kaggle 侧资料：内核源码、数据集清单、提交记�
 repro/           复现用 notebook（0.716 原版 + 诊断版）
 results/         全部实验输出（json / npz / md）
 runs/diag1/      诊断跑批产物：diag_lp.npy、final-logits.npz、diag_pred.parquet
+runs/diag3/      stage3 产物：final-logits / Apex 前预测 / 两款 GLM 的逐文本特征与报告
 scripts/         实验脚本（建集、五折、基线、聚类、重放、推送、轮询）
 tools/           辅助工具（会话导出）
 logs/            内核状态轮询日志

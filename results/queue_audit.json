@@ -1,0 +1,73 @@
+{
+ "n_rows": 3350,
+ "token_total": 487285.19175,
+ "top15": {
+  "k": 502,
+  "overlap": 455,
+  "old_only": 47,
+  "new_only": 47,
+  "jaccard": 0.8287795992714025,
+  "token_cov_old": 0.16856914265135783,
+  "token_cov_new": 0.16851242843047057,
+  "old_only_token_share": 0.09211048987361976,
+  "old_only_mean_mass": 0.5890900485214968,
+  "old_only_mean_amb": 0.36391587302680595,
+  "new_only_mean_mass": 0.3659379557916622,
+  "new_only_mean_amb": 0.8785433212871886,
+  "mass_rank_of_new_only_max": 4
+ },
+ "top25": {
+  "k": 838,
+  "overlap": 811,
+  "old_only": 27,
+  "new_only": 27,
+  "jaccard": 0.9375722543352601,
+  "token_cov_old": 0.2755595378709761,
+  "token_cov_new": 0.27493076029844277,
+  "old_only_token_share": 0.03164845837613795,
+  "old_only_mean_mass": 0.16145090328284442,
+  "old_only_mean_amb": 0.33108233559899497,
+  "new_only_mean_mass": 0.08886829311391858,
+  "new_only_mean_amb": 0.9052666176100039,
+  "mass_rank_of_new_only_max": 15
+ },
+ "top30": {
+  "k": 1005,
+  "overlap": 979,
+  "old_only": 26,
+  "new_only": 26,
+  "jaccard": 0.9495635305528612,
+  "token_cov_old": 0.3251480445793785,
+  "token_cov_new": 0.324327710293076,
+  "old_only_token_share": 0.024764171156340362,
+  "old_only_mean_mass": 0.08341268692323375,
+  "old_only_mean_amb": 0.35105176521550496,
+  "new_only_mean_mass": 0.04176910190222351,
+  "new_only_mean_amb": 0.9165614252143001,
+  "mass_rank_of_new_only_max": 1
+ },
+ "top45": {
+  "k": 1508,
+  "overlap": 1472,
+  "old_only": 36,
+  "new_only": 36,
+  "jaccard": 0.9533678756476683,
+  "token_cov_old": 0.46571617626014183,
+  "token_cov_new": 0.4651512021861067,
+  "old_only_token_share": 0.02245132708515276,
+  "old_only_mean_mass": 0.009812477517209818,
+  "old_only_mean_amb": 0.41662420335670447,
+  "new_only_mean_mass": 0.005969220149706393,
+  "new_only_mean_amb": 0.9044037334492759,
+  "mass_rank_of_new_only_max": 177
+ },
+ "mass": {
+  "p50": 0.003648676411258377,
+  "p90": 0.6133548529818619,
+  "max": 0.9673689173427781
+ },
+ "amb": {
+  "p50": 0.7579841428396692,
+  "p90": 0.9598911673717436
+ }
+}

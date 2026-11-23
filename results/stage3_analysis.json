@@ -1,0 +1,30 @@
+{
+  "final_ba": 0.5017306359461492,
+  "member_sum_maxabs_diff": 3.4437683211763215e-06,
+  "member_keys_found": 16,
+  "ba_pre_apex": 0.5206457373426422,
+  "apex_flips": 251,
+  "apex_flips_fixed": 24,
+  "apex_flips_broken": 82,
+  "score_files": [
+    "flash_scores.npz",
+    "glm53_scores.npz"
+  ],
+  "tags": [
+    "flash",
+    "glm53"
+  ],
+  "pair_rows": 258,
+  "auc": {
+    "d_lp_mean": 0.9899057464274855,
+    "d_lp_sum_n": 0.9899057464274855,
+    "d_lp_minus_max": 0.9899057464274855,
+    "d_h_mean": 0.12964426877470356,
+    "d_top1": 0.8854971115840681,
+    "d_m2": 0.15427181514138036
+  },
+  "pair_balance": {
+    "glm-5.3": 143,
+    "glm-5.3-flash": 115
+  }
+}

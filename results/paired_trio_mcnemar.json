@@ -1,0 +1,42 @@
+{
+ "gpt-5.6-luna__vs__gpt-5.6-terra": {
+  "paired_only": 4,
+  "binary_only": 1,
+  "both": 97,
+  "neither": 48,
+  "n_prompts": 150,
+  "acc_binary": 0.653,
+  "acc_paired": 0.673,
+  "mcnemar_p": 0.375
+ },
+ "gpt-5.6-luna__vs__gpt-5.6-sol": {
+  "paired_only": 11,
+  "binary_only": 4,
+  "both": 90,
+  "neither": 45,
+  "n_prompts": 150,
+  "acc_binary": 0.627,
+  "acc_paired": 0.673,
+  "mcnemar_p": 0.118
+ },
+ "gemini-3.7-flash__vs__gemini-3.8-flash": {
+  "paired_only": 4,
+  "binary_only": 6,
+  "both": 76,
+  "neither": 64,
+  "n_prompts": 150,
+  "acc_binary": 0.547,
+  "acc_paired": 0.533,
+  "mcnemar_p": 0.754
+ },
+ "glm-5.3__vs__glm-5.3-flash": {
+  "paired_only": 3,
+  "binary_only": 4,
+  "both": 70,
+  "neither": 73,
+  "n_prompts": 150,
+  "acc_binary": 0.493,
+  "acc_paired": 0.487,
+  "mcnemar_p": 1.0
+ }
+}
