@@ -1,0 +1,30 @@
+{
+ "gpt": {
+  "labels": [
+   "gpt-5.6-luna",
+   "gpt-5.6-terra",
+   "gpt-5.6-sol"
+  ],
+  "n_official": 450,
+  "n_external": 632,
+  "official_clf": 0.40222222222222226,
+  "official_lm": 0.3711111111111111,
+  "external_clf": 0.34784650027455166,
+  "external_lm": 0.33024232063013054,
+  "chance": 0.3333333333333333
+ },
+ "claude_glm": {
+  "labels": [
+   "claude-fable-5",
+   "glm-5.3",
+   "glm-5.3-flash"
+  ],
+  "n_official": 449,
+  "n_external": 560,
+  "official_clf": 0.37861297539149885,
+  "official_lm": 0.3294705443698732,
+  "external_clf": 0.33525813692480355,
+  "external_lm": 0.3289319117096895,
+  "chance": 0.3333333333333333
+ }
+}

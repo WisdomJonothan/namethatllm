@@ -1,0 +1,134 @@
+{
+  "base_ba": 0.4783,
+  "luna_acc_baseline": 0.7979,
+  "terra_acc_baseline": 0.3255,
+  "sol_acc_baseline": 0.2543,
+  "sweep": [
+    {
+      "tau": 0.0,
+      "mode": "both",
+      "gain": 0.0014,
+      "luna_acc": 0.5266,
+      "terra_acc": 0.5142,
+      "sol_acc": 0.3621,
+      "n_changed": 191
+    },
+    {
+      "tau": 0.0,
+      "mode": "from_luna",
+      "gain": 0.0056,
+      "luna_acc": 0.5266,
+      "terra_acc": 0.5425,
+      "sol_acc": 0.4095,
+      "n_changed": 169
+    },
+    {
+      "tau": 0.4,
+      "mode": "both",
+      "gain": 0.0013,
+      "luna_acc": 0.5957,
+      "terra_acc": 0.4906,
+      "sol_acc": 0.3147,
+      "n_changed": 140
+    },
+    {
+      "tau": 0.4,
+      "mode": "from_luna",
+      "gain": 0.00378,
+      "luna_acc": 0.5957,
+      "terra_acc": 0.5094,
+      "sol_acc": 0.3405,
+      "n_changed": 126
+    },
+    {
+      "tau": 0.5,
+      "mode": "both",
+      "gain": -0.00085,
+      "luna_acc": 0.6383,
+      "terra_acc": 0.4481,
+      "sol_acc": 0.2759,
+      "n_changed": 99
+    },
+    {
+      "tau": 0.5,
+      "mode": "from_luna",
+      "gain": 0.00137,
+      "luna_acc": 0.6383,
+      "terra_acc": 0.4623,
+      "sol_acc": 0.3017,
+      "n_changed": 88
+    },
+    {
+      "tau": 0.6,
+      "mode": "both",
+      "gain": -0.00117,
+      "luna_acc": 0.6915,
+      "terra_acc": 0.4151,
+      "sol_acc": 0.25,
+      "n_changed": 68
+    },
+    {
+      "tau": 0.6,
+      "mode": "from_luna",
+      "gain": 0.00079,
+      "luna_acc": 0.6915,
+      "terra_acc": 0.4245,
+      "sol_acc": 0.2759,
+      "n_changed": 59
+    },
+    {
+      "tau": 0.7,
+      "mode": "both",
+      "gain": -0.0025,
+      "luna_acc": 0.7234,
+      "terra_acc": 0.3679,
+      "sol_acc": 0.2414,
+      "n_changed": 37
+    },
+    {
+      "tau": 0.7,
+      "mode": "from_luna",
+      "gain": -0.00128,
+      "luna_acc": 0.7234,
+      "terra_acc": 0.3726,
+      "sol_acc": 0.2586,
+      "n_changed": 32
+    },
+    {
+      "tau": 0.8,
+      "mode": "both",
+      "gain": -0.00152,
+      "luna_acc": 0.7606,
+      "terra_acc": 0.3396,
+      "sol_acc": 0.25,
+      "n_changed": 14
+    },
+    {
+      "tau": 0.8,
+      "mode": "from_luna",
+      "gain": -0.00128,
+      "luna_acc": 0.7606,
+      "terra_acc": 0.3396,
+      "sol_acc": 0.2543,
+      "n_changed": 13
+    },
+    {
+      "tau": 0.9,
+      "mode": "both",
+      "gain": -0.0003,
+      "luna_acc": 0.7926,
+      "terra_acc": 0.3255,
+      "sol_acc": 0.2543,
+      "n_changed": 1
+    },
+    {
+      "tau": 0.9,
+      "mode": "from_luna",
+      "gain": -0.0003,
+      "luna_acc": 0.7926,
+      "terra_acc": 0.3255,
+      "sol_acc": 0.2543,
+      "n_changed": 1
+    }
+  ]
+}

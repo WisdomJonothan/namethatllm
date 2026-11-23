@@ -1,0 +1,190 @@
+{
+  "base_ba": 0.4783,
+  "prior": {
+    "gpt-5.6-luna": 0.3351,
+    "gpt-5.6-terra": 0.3333,
+    "gpt-5.6-sol": 0.3316
+  },
+  "sweep": [
+    {
+      "alpha": 0.0,
+      "tau": 0.0,
+      "gain": 0.0056,
+      "n_changed": 169,
+      "luna": 0.5266,
+      "terra": 0.5425,
+      "sol": 0.4095
+    },
+    {
+      "alpha": 0.0,
+      "tau": 0.5,
+      "gain": 0.00137,
+      "n_changed": 88,
+      "luna": 0.6383,
+      "terra": 0.4623,
+      "sol": 0.3017
+    },
+    {
+      "alpha": 0.0,
+      "tau": 0.6,
+      "gain": 0.00079,
+      "n_changed": 59,
+      "luna": 0.6915,
+      "terra": 0.4245,
+      "sol": 0.2759
+    },
+    {
+      "alpha": 0.0,
+      "tau": 0.7,
+      "gain": -0.00128,
+      "n_changed": 32,
+      "luna": 0.7234,
+      "terra": 0.3726,
+      "sol": 0.2586
+    },
+    {
+      "alpha": 0.3,
+      "tau": 0.0,
+      "gain": 0.0056,
+      "n_changed": 169,
+      "luna": 0.5266,
+      "terra": 0.5425,
+      "sol": 0.4095
+    },
+    {
+      "alpha": 0.3,
+      "tau": 0.5,
+      "gain": 0.00161,
+      "n_changed": 89,
+      "luna": 0.6383,
+      "terra": 0.4623,
+      "sol": 0.306
+    },
+    {
+      "alpha": 0.3,
+      "tau": 0.6,
+      "gain": 0.00079,
+      "n_changed": 59,
+      "luna": 0.6915,
+      "terra": 0.4245,
+      "sol": 0.2759
+    },
+    {
+      "alpha": 0.3,
+      "tau": 0.7,
+      "gain": -0.00128,
+      "n_changed": 32,
+      "luna": 0.7234,
+      "terra": 0.3726,
+      "sol": 0.2586
+    },
+    {
+      "alpha": 0.5,
+      "tau": 0.0,
+      "gain": 0.0056,
+      "n_changed": 169,
+      "luna": 0.5266,
+      "terra": 0.5425,
+      "sol": 0.4095
+    },
+    {
+      "alpha": 0.5,
+      "tau": 0.5,
+      "gain": 0.00161,
+      "n_changed": 89,
+      "luna": 0.6383,
+      "terra": 0.4623,
+      "sol": 0.306
+    },
+    {
+      "alpha": 0.5,
+      "tau": 0.6,
+      "gain": 0.00079,
+      "n_changed": 59,
+      "luna": 0.6915,
+      "terra": 0.4245,
+      "sol": 0.2759
+    },
+    {
+      "alpha": 0.5,
+      "tau": 0.7,
+      "gain": -0.00128,
+      "n_changed": 32,
+      "luna": 0.7234,
+      "terra": 0.3726,
+      "sol": 0.2586
+    },
+    {
+      "alpha": 0.7,
+      "tau": 0.0,
+      "gain": 0.00531,
+      "n_changed": 170,
+      "luna": 0.5213,
+      "terra": 0.5425,
+      "sol": 0.4095
+    },
+    {
+      "alpha": 0.7,
+      "tau": 0.5,
+      "gain": 0.00161,
+      "n_changed": 89,
+      "luna": 0.6383,
+      "terra": 0.4623,
+      "sol": 0.306
+    },
+    {
+      "alpha": 0.7,
+      "tau": 0.6,
+      "gain": 0.00079,
+      "n_changed": 59,
+      "luna": 0.6915,
+      "terra": 0.4245,
+      "sol": 0.2759
+    },
+    {
+      "alpha": 0.7,
+      "tau": 0.7,
+      "gain": -0.00128,
+      "n_changed": 32,
+      "luna": 0.7234,
+      "terra": 0.3726,
+      "sol": 0.2586
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.0,
+      "gain": 0.00531,
+      "n_changed": 170,
+      "luna": 0.5213,
+      "terra": 0.5425,
+      "sol": 0.4095
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.5,
+      "gain": 0.00161,
+      "n_changed": 89,
+      "luna": 0.6383,
+      "terra": 0.4623,
+      "sol": 0.306
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.6,
+      "gain": 0.00079,
+      "n_changed": 59,
+      "luna": 0.6915,
+      "terra": 0.4245,
+      "sol": 0.2759
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.7,
+      "gain": -0.00128,
+      "n_changed": 32,
+      "luna": 0.7234,
+      "terra": 0.3726,
+      "sol": 0.2586
+    }
+  ]
+}
