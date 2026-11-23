@@ -1,0 +1,41 @@
+{
+  "n_rows": 104,
+  "accept_all": 0.006696646337042547,
+  "stability": {
+    "base_diff": {
+      "mean": 0.005932835388046414,
+      "p2.5": 0.005167465641195185,
+      "p97.5": 0.0064160627231256,
+      "share_better_than_accept_all": 0.0,
+      "mean_vetoed_rows": 6.8
+    },
+    "deb_diff": {
+      "mean": 0.006353710808921833,
+      "p2.5": 0.006353710808921833,
+      "p97.5": 0.006353710808921834,
+      "share_better_than_accept_all": 0.0,
+      "mean_vetoed_rows": 3.0
+    },
+    "n14b_diff": {
+      "mean": 0.006912655843534396,
+      "p2.5": 0.006186451799070231,
+      "p97.5": 0.007379711557144804,
+      "share_better_than_accept_all": 0.675,
+      "mean_vetoed_rows": 11.0
+    },
+    "reader_min_raw": {
+      "mean": 0.006619485843215386,
+      "p2.5": 0.0060107752808011205,
+      "p97.5": 0.006696646337042548,
+      "share_better_than_accept_all": 0.0,
+      "mean_vetoed_rows": 3.375
+    },
+    "reader_min_sm": {
+      "mean": 0.0066724849702885876,
+      "p2.5": 0.006672484970288587,
+      "p97.5": 0.006696646337042548,
+      "share_better_than_accept_all": 0.0,
+      "mean_vetoed_rows": 3.125
+    }
+  }
+}

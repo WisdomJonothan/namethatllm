@@ -211,3 +211,11 @@ stage3 内核（`repro/diag_v3.ipynb`）在 eval_v2 上跑完整个 v3 流水线
 **限制**：弱读者底座上的 +0.024 不迁移到真实底座；在真实底座上出厂融合本身已贡献 +0.01892，改版增量是 +0.0086（Apex 前）/ +0.0067（Apex 后）。且增益依赖"底座对 GLM 总概率的判断"，是外部语料分布上的性质；保持总概率不保证不跨族改判，而本变体的收益正是来自跨族改判。不能把它加到公榜 0.716 上。
 
 证据：`results/stage3_analysis.json`、`results/glm_blend_final.json`、`results/glm_blend_decomp.json`、`runs/diag3/`。
+
+## 为什么 v5 暂不加读者否决层
+
+在 eval_v2 的 3,350 行上重放完整 Apex。出厂版和 v5 最终有 104 行分歧，v5 单独正确 32 行，出厂单独正确 12 行，两边都错 60 行。全部接受 v5 相对出厂的 BA 增量为 0.006697。否决后回到出厂，对出厂的增量为零。重复 40 次按 prompt 分折，平均增量为 base_diff 0.005933、DeBERTa 0.006354、n14b_clean 0.006913、原始 reader_min 0.006619、成员 softmax 后的 reader_min 0.006672。n14b_clean 在决定性行上的 AUC 为 0.766，额外平均收益仅 0.000216。重排复用同一批样本，仍需独立数据验证。reader_min 对成员权重尺度敏感，现有证据不足以支持六成员共识的解释。保留简单融合等待正式提交结果。
+
+补充一条同批数据的旁证（`scripts/glm_family_probe.py`、`results/glm_family_probe.json`）：在入选的 553 篇里，真 GLM 258 篇、非 GLM 295 篇，底座 GLM 质量在中位数以上的困难负例 135 篇。两款 GLM 的较优自似然对"是不是 GLM"的全样本 AUC 只有 0.512、按底座质量分 5 层后的层内 AUC 0.511；token 熵、surprise、fdg 都在 0.48–0.51。自似然只区分得了两款 GLM 属于哪一版（258 篇真 GLM 上 AUC 0.99），不能充当家族证据。该探针最初报的 `reader_min` 层内 AUC 0.637 已证伪：`diag_lp_members.npz` 存的是乘过成员权重的 log 贡献，`exp(3·log p)=p³`，取最小值实际在比输出尺度；逐成员 softmax 后降到 0.576、按主权重还原后 0.500，且 533/553 篇的最小值来自 DeBERTa 或 `n14b_clean`。
+
+复现：`python scripts/glm_flip_veto.py` 打印 104 行分歧与 32/12/60 的分解，`python scripts/glm_flip_veto_stability.py` 做 40 次折重排；逐行分数在 `results/glm_flip_rows.npz`。
