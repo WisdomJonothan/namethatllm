@@ -1,0 +1,167 @@
+{
+  "composition": {
+    "into_glm_n": 98,
+    "into_glm_truth_glm": 41,
+    "into_glm_truth_other": 57,
+    "away_glm_n": 10,
+    "away_glm_truth_glm": 5,
+    "away_glm_truth_other": 5,
+    "into_glm_by_src": {
+      "corpus": 88,
+      "harvest": 10
+    },
+    "into_glm_correct_by_src": {
+      "corpus": 31,
+      "harvest": 10
+    }
+  },
+  "delta_total": 0.006416062723125603,
+  "delta_from_glm_classes": 0.006952238433719917,
+  "delta_from_other_classes": -0.0005361757105943145,
+  "table": [
+    {
+      "class": "claude-fable-5",
+      "n": 200,
+      "recall_shipped": 0.015,
+      "recall_mass": 0.01,
+      "delta": -0.004999999999999999,
+      "glm": false
+    },
+    {
+      "class": "claude-opus-4-8",
+      "n": 215,
+      "recall_shipped": 0.5162790697674419,
+      "recall_mass": 0.5116279069767442,
+      "delta": -0.0046511627906976605,
+      "glm": false
+    },
+    {
+      "class": "claude-opus-4-6",
+      "n": 227,
+      "recall_shipped": 0.8898678414096917,
+      "recall_mass": 0.8898678414096917,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "claude-opus-5",
+      "n": 145,
+      "recall_shipped": 0.9586206896551724,
+      "recall_mass": 0.9586206896551724,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "claude-sonnet-5",
+      "n": 187,
+      "recall_shipped": 0.893048128342246,
+      "recall_mass": 0.893048128342246,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gemini-3.1-pro-preview",
+      "n": 150,
+      "recall_shipped": 0.6266666666666667,
+      "recall_mass": 0.6266666666666667,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gemini-3.6-flash",
+      "n": 60,
+      "recall_shipped": 0.45,
+      "recall_mass": 0.45,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gemini-3.7-flash",
+      "n": 347,
+      "recall_shipped": 0.4812680115273775,
+      "recall_mass": 0.4812680115273775,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gemini-3.8-flash",
+      "n": 42,
+      "recall_shipped": 0.047619047619047616,
+      "recall_mass": 0.047619047619047616,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gpt-5.5",
+      "n": 211,
+      "recall_shipped": 0.7345971563981043,
+      "recall_mass": 0.7345971563981043,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gpt-5.6-sol",
+      "n": 232,
+      "recall_shipped": 0.2543103448275862,
+      "recall_mass": 0.2543103448275862,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gpt-5.6-luna",
+      "n": 188,
+      "recall_shipped": 0.8031914893617021,
+      "recall_mass": 0.8031914893617021,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gpt-5.6-terra",
+      "n": 212,
+      "recall_shipped": 0.330188679245283,
+      "recall_mass": 0.330188679245283,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "gpt-6-astra",
+      "n": 205,
+      "recall_shipped": 0.8292682926829268,
+      "recall_mass": 0.8292682926829268,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "qwen3.8-max",
+      "n": 132,
+      "recall_shipped": 0.3560606060606061,
+      "recall_mass": 0.3560606060606061,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "kimi-k3",
+      "n": 237,
+      "recall_shipped": 0.0379746835443038,
+      "recall_mass": 0.0379746835443038,
+      "delta": 0.0,
+      "glm": false
+    },
+    {
+      "class": "glm-5.3",
+      "n": 198,
+      "recall_shipped": 0.601010101010101,
+      "recall_mass": 0.6212121212121212,
+      "delta": 0.02020202020202022,
+      "glm": true
+    },
+    {
+      "class": "glm-5.3-flash",
+      "n": 162,
+      "recall_shipped": 0.5432098765432098,
+      "recall_mass": 0.6481481481481481,
+      "delta": 0.1049382716049383,
+      "glm": true
+    }
+  ]
+}

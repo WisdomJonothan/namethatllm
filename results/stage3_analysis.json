@@ -1,11 +1,12 @@
 {
-  "final_ba": 0.5017306359461492,
+  "v1_input_ba": 0.5017306359461492,
+  "final_ba": 0.4994127331504685,
   "member_sum_maxabs_diff": 3.4437683211763215e-06,
   "member_keys_found": 16,
   "ba_pre_apex": 0.5206457373426422,
-  "apex_flips": 251,
-  "apex_flips_fixed": 24,
-  "apex_flips_broken": 82,
+  "apex_flips": 239,
+  "apex_flips_fixed": 30,
+  "apex_flips_broken": 104,
   "score_files": [
     "flash_scores.npz",
     "glm53_scores.npz"

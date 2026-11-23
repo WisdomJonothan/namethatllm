@@ -57,8 +57,16 @@ def main():
         L = d['labels']
         y = np.array([truth[i] for i in d['ids']])
         P = softmax(d['logits'])
+        # final-logits.npz holds the logits that v1_stage.py reads as its base:
+        # every write() overwrites it and the last write precedes cell 48, so its
+        # argmax is the V1 *input* prediction, not the final one.
         pred = np.array(L)[P.argmax(1)]
-        rep['final_ba'] = ba(pred, y)[0]
+        rep['v1_input_ba'] = ba(pred, y)[0]
+        dp = os.path.join(a.run, 'diag_pred.parquet')
+        post = None
+        if os.path.exists(dp):
+            post = pd.read_parquet(dp).set_index('id').loc[d['ids'], 'model'].values
+            rep['final_ba'] = ba(post, y)[0]
 
         # member-LP reconciliation: sum the six readers with the shipped weights
         mp = os.path.join(a.run, 'diag_lp_members.npz')
@@ -73,14 +81,14 @@ def main():
             rep['member_sum_maxabs_diff'] = float(np.abs(tot - ref).max())
             rep['member_keys_found'] = len(keys)
 
-        # Apex retention: prediction before vs after cell 48
+        # Apex effect: the real parquet before vs the real parquet after cell 48
         pp = os.path.join(a.run, 'pred_pre_apex.parquet')
-        if os.path.exists(pp):
+        if os.path.exists(pp) and post is not None:
             pre = pd.read_parquet(pp).set_index('id').loc[d['ids'], 'model'].values
             rep['ba_pre_apex'] = ba(pre, y)[0]
-            rep['apex_flips'] = int((pre != pred).sum())
-            rep['apex_flips_fixed'] = int(((pre != y) & (pred == y)).sum())
-            rep['apex_flips_broken'] = int(((pre == y) & (pred != y)).sum())
+            rep['apex_flips'] = int((pre != post).sum())
+            rep['apex_flips_fixed'] = int(((pre != y) & (post == y)).sum())
+            rep['apex_flips_broken'] = int(((pre == y) & (post != y)).sum())
 
     # ---- per-token GLM evidence ----
     files = sorted(glob.glob(os.path.join(a.run, 'v1', '**', '*_scores.npz'), recursive=True))
