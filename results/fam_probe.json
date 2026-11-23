@@ -1,0 +1,9 @@
+{
+ "n_in": 632,
+ "auc_raw_max": 0.29117475153919953,
+ "auc_centred_max": 0.2909407280111027,
+ "centred_acc_in_family": 0.3686708860759494,
+ "n_base_in_family": 516,
+ "base_member_acc": 0.5503875968992248,
+ "probe_member_acc": 0.3682170542635659
+}
